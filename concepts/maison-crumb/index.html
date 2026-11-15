@@ -1,0 +1,134 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Maison Crumb â€” Artisan Bakery Concept | Lux and Logic</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,800&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fff6e9;--paper:#fffdf8;--ink:#3a2416;--muted:#7a6251;--butter:#ffcc4d;--berry:#c94f4f;--sage:#6f8f72;--line:#ecdcc8}
+*{box-sizing:border-box} html{scroll-behavior:smooth}
+body{margin:0;font-family:"Nunito",system-ui,sans-serif;color:var(--ink);background:radial-gradient(900px 420px at 10% -10%, #ffe9b8 0%, transparent 60%),var(--bg);line-height:1.6;overflow-x:hidden}
+img{max-width:100%;display:block}
+.wrap{max-width:1180px;margin:0 auto;padding:0 22px}
+header{position:sticky;top:0;z-index:30;background:rgba(255,246,233,.8);backdrop-filter:blur(12px);border-bottom:1px solid rgba(58,36,22,.1)}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+.brand{font-family:"Fraunces",serif;font-size:30px;font-weight:800;color:var(--ink);text-decoration:none}
+nav a{color:var(--muted);text-decoration:none;margin-left:16px;font-weight:800;font-size:14px} nav a:hover{color:var(--ink)}
+.hero{padding:28px 0 10px}
+.hero-box{display:grid;grid-template-columns:1fr 1fr;gap:16px;background:var(--paper);border:1px solid var(--line);border-radius:34px;overflow:hidden;box-shadow:0 20px 50px rgba(58,36,22,.08)}
+.hero-copy{padding:38px;display:flex;flex-direction:column;justify-content:center}
+.kicker{display:inline-flex;width:max-content;align-items:center;gap:8px;background:#fff1c9;border:1px solid #f3d58c;color:#6a4a00;padding:7px 12px;border-radius:999px;font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;margin-bottom:14px}
+h1{font-family:"Fraunces",serif;font-size:clamp(42px,5.5vw,70px);line-height:.95;margin:0 0 14px}
+.lead{color:var(--muted);font-size:18px;margin:0;max-width:540px}
+.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 18px;border-radius:16px;text-decoration:none;font-weight:800;transition:transform .2s, box-shadow .25s;border:2px solid transparent}
+.btn.primary{background:var(--ink);color:#fff7ec;box-shadow:0 10px 22px rgba(58,36,22,.18)}
+.btn.alt{background:#fff;border-color:var(--line);color:var(--ink)}
+.btn:hover{transform:translateY(-2px) rotate(-.2deg)}
+.hero-media{min-height:480px;position:relative}
+.hero-media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.blob{position:absolute;right:16px;bottom:16px;background:rgba(255,253,248,.9);backdrop-filter:blur(6px);border:1px solid var(--line);padding:12px 14px;border-radius:18px;font-weight:800}
+section{padding:36px 0}
+h2{font-family:"Fraunces",serif;font-size:46px;line-height:1;margin:0 0 10px}
+.sub{margin:0 0 16px;color:var(--muted)}
+.ticker{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.pillcard{background:var(--paper);border:1px solid var(--line);border-radius:22px;padding:18px}
+.pillcard h3{margin:0 0 6px;font-size:18px} .pillcard p{margin:0;color:var(--muted);font-size:14px}
+.split{display:grid;grid-template-columns:1.05fr .95fr;gap:16px}
+.panel{background:var(--paper);border:1px solid var(--line);border-radius:24px;padding:20px}
+.row{display:flex;justify-content:space-between;gap:12px;padding:12px 0;border-bottom:2px dotted #e6d6c3} .row:last-child{border-bottom:0}
+.row span{color:var(--berry);font-weight:800}
+.steps{list-style:none;padding:0;margin:0;display:grid;gap:10px}
+.steps li{display:flex;gap:10px;align-items:flex-start;color:var(--muted)}
+.steps b{width:28px;height:28px;border-radius:10px;background:var(--butter);display:inline-flex;align-items:center;justify-content:center;color:#4a3500;flex:0 0 28px}
+.gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.g{border-radius:22px;overflow:hidden;border:1px solid var(--line);min-height:230px;position:relative}
+.g img{width:100%;height:100%;object-fit:cover;transition:transform .8s ease} .g:hover img{transform:scale(1.07) rotate(-.5deg)}
+.tag{position:absolute;left:12px;bottom:12px;background:rgba(255,253,248,.92);padding:6px 10px;border-radius:999px;font-size:12px;font-weight:800;border:1px solid var(--line)}
+.cta{background:linear-gradient(135deg,#3a2416,#5a3723);color:#fff7ec;border-radius:28px;padding:28px;display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap}
+.cta p{margin:6px 0 0;color:#eadfce} .cta .btn.primary{background:var(--butter);color:#3a2416;box-shadow:none}
+.cta .btn.alt{background:transparent;color:#fff;border-color:rgba(255,255,255,.35)}
+footer{padding:24px 0 36px;color:var(--muted)}
+.note{margin-top:10px;color:var(--muted);font-size:14px} .note a,.panel a{color:var(--ink);font-weight:800}
+.reveal{opacity:0;transform:translateY(20px) scale(.99);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.2,1)}.reveal.in{opacity:1;transform:none}
+.stagger>*{opacity:0;transform:translateY(14px);transition:.55s ease}.stagger.in>*{opacity:1;transform:none}
+.stagger.in>*:nth-child(1){transition-delay:.04s}.stagger.in>*:nth-child(2){transition-delay:.1s}.stagger.in>*:nth-child(3){transition-delay:.16s}.stagger.in>*:nth-child(4){transition-delay:.22s}
+@media(max-width:980px){.hero-box,.split{grid-template-columns:1fr}.hero-media{min-height:340px}.ticker,.gallery{grid-template-columns:1fr 1fr}}
+@keyframes slide{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@media(max-width:640px){.ticker,.gallery{grid-template-columns:1fr} nav a{margin-left:10px}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal,.stagger>*{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<header><div class="wrap nav"><a class="brand" href="../../index.html">Lux & Logic</a><nav><a href="#menu">Menu</a><a href="#custom">Custom</a><a href="#visit">Visit</a></nav></div></header>
+<main>
+  <section class="hero"><div class="wrap hero-box reveal">
+    <div class="hero-copy">
+      <div class="kicker">Concept Â· Artisan Bakery</div>
+      <h1>Maison Crumb, baked to be remembered.</h1>
+      <p class="lead">A product-led, appetite-sparking bakery experience that turns browsers into visitors, pre-orders, and custom cake enquiries.</p>
+      <div class="actions">
+        <a class="btn primary" href="#menu">See todayâ€™s bakes</a>
+        <a class="btn alt" href="#custom">Custom order</a>
+        <a class="btn alt" href="mailto:syashvardhan00714@gmail.com?subject=QUOTE%20-%20Bakery%20Website%20(Maison%20Crumb%20concept)">Email for a quote</a>
+      </div>
+      <p class="note">Email: <a href="mailto:syashvardhan00714@gmail.com">syashvardhan00714@gmail.com</a></p>
+    </div>
+    <div class="hero-media"><img src="https://images.unsplash.com/photo-1517433670267-08bbd4be890f?auto=format&fit=crop&w=1400&q=80" alt="Assorted artisan pastries"><div class="blob">Fresh daily Â· Small batch Â· Pre-orders open</div></div>
+  </div></section>
+
+  <section><div class="wrap" style="margin-bottom:14px"><div class="panel reveal" style="overflow:hidden;padding:0;border-radius:22px"><div style="display:flex;gap:18px;padding:14px 18px;white-space:nowrap;animation:slide 18s linear infinite;font-family:'Fraunces',serif;font-size:22px;color:var(--ink)"><span>ðŸ¥ Fresh croissants at 8:00</span><span>â€¢</span><span>ðŸ° Custom cakes â€” book 5 days ahead</span><span>â€¢</span><span>ðŸž Sourdough Saturdays</span><span>â€¢</span><span>ðŸ§ Weekend cupcake boxes</span><span>â€¢</span><span>ðŸ¥ Fresh croissants at 8:00</span><span>â€¢</span><span>ðŸ° Custom cakes â€” book 5 days ahead</span><span>â€¢</span><span>ðŸž Sourdough Saturdays</span><span>â€¢</span><span>ðŸ§ Weekend cupcake boxes</span></div></div></div>
+  <div class="wrap ticker stagger">
+    <div class="pillcard"><h3>Daily bakes</h3><p>Loaves, viennoiserie, and seasonal treats â€” front and center.</p></div>
+    <div class="pillcard"><h3>Custom cakes</h3><p>Guided enquiries with lead times, flavors, and inspiration.</p></div>
+    <div class="pillcard"><h3>Pre-order</h3><p>Reserve weekend favorites and event boxes with ease.</p></div>
+    <div class="pillcard"><h3>Visit-ready</h3><p>Hours, location, and contact info always one tap away.</p></div>
+  </div></section>
+
+  <section id="menu"><div class="wrap split">
+    <div class="panel reveal"><h2>Menu highlights</h2><p class="sub">Clear categories and pricing cues that make choosing deliciously easy.</p>
+      <div class="row"><div><strong>Sourdough Loaf</strong></div><span>â‚¬5.50</span></div>
+      <div class="row"><div><strong>Butter Croissant</strong></div><span>â‚¬3.20</span></div>
+      <div class="row"><div><strong>Pain au Chocolat</strong></div><span>â‚¬3.60</span></div>
+      <div class="row"><div><strong>Fruit Tart (slice)</strong></div><span>â‚¬4.80</span></div>
+      <div class="row"><div><strong>Cinnamon Bun</strong></div><span>â‚¬3.90</span></div>
+      <div class="row"><div><strong>Celebration Cupcakes (box)</strong></div><span>from â‚¬18</span></div>
+      <p class="note">Allergens/ingredients listed per item in the production build.</p>
+    </div>
+    <div class="panel reveal" id="custom"><h2>Custom orders</h2><p class="sub">A simple flow that captures the right details and sets expectations.</p>
+      <ul class="steps">
+        <li><b>1</b><div><strong>Occasion & size</strong><br>Birthdays, weddings, corporate, or just-because.</div></li>
+        <li><b>2</b><div><strong>Flavors & theme</strong><br>Share tastes, palette, and inspiration photos.</div></li>
+        <li><b>3</b><div><strong>Date & fulfillment</strong><br>Pickup/delivery, lead time, and quote confirmation.</div></li>
+      </ul>
+      <div class="actions" style="margin-top:14px"><a class="btn primary" href="mailto:syashvardhan00714@gmail.com?subject=Custom%20Cake%20Enquiry%20-%20Maison%20Crumb%20concept">Start an enquiry</a></div>
+    </div>
+  </div></section>
+
+  <section><div class="wrap">
+    <h2 class="reveal">From the kitchen</h2><p class="sub reveal">Tactile, product-first imagery with playful motion and micro-interactions.</p>
+    <div class="gallery stagger">
+      <div class="g"><img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=900&q=80" alt="Croissants"><div class="tag">Morning pastries</div></div>
+      <div class="g"><img src="https://images.unsplash.com/photo-1549931319-a545dcf3bc73?auto=format&fit=crop&w=900&q=80" alt="Bread loaves"><div class="tag">Signature loaves</div></div>
+      <div class="g"><img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=900&q=80" alt="Celebration cake"><div class="tag">Custom cakes</div></div>
+      <div class="g"><img src="https://images.unsplash.com/photo-1486427944299-d1955d23e34d?auto=format&fit=crop&w=900&q=80" alt="Patisserie assortment"><div class="tag">Patisserie case</div></div>
+    </div>
+  </div></section>
+
+  <section id="visit"><div class="wrap ticker stagger">
+    <div class="pillcard"><h3>Hours</h3><p>Tueâ€“Sun 8:00â€“17:00<br>Mon closed</p></div>
+    <div class="pillcard"><h3>Location</h3><p>Sample Street, Your City<br>Map & directions in production</p></div>
+    <div class="pillcard"><h3>Pre-order & pickup</h3><p>Reserve ahead for weekends and celebrations.</p></div>
+    <div class="pillcard"><h3>Contact</h3><p><a href="mailto:syashvardhan00714@gmail.com">syashvardhan00714@gmail.com</a></p></div>
+  </div></section>
+
+  <section><div class="wrap cta reveal">
+    <div><h2 style="color:#fff7ec;margin:0;font-size:40px">Want a website that brings in more orders?</h2><p>Lux and Logic Â· Premium motion standard Â· From â‚¹15,000â€“â‚¹20,000 INR (local-currency quote w/ FX rate/date) Â· Revisions â‚¹1,000 INR/hr</p></div>
+    <div class="actions"><a class="btn primary" href="mailto:syashvardhan00714@gmail.com?subject=QUOTE%20-%20Bakery%20Website%20(Maison%20Crumb%20concept)">Email for a quote</a><a class="btn alt" href="../../index.html">Back to portfolio</a></div>
+  </div></section>
+</main>
+<footer><div class="wrap">Concept by Lux and Logic Â· Maison Crumb Â· Photos via Unsplash Â· <a href="mailto:syashvardhan00714@gmail.com">syashvardhan00714@gmail.com</a></div></footer>
+<script>(function(){const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});document.querySelectorAll('.reveal,.stagger').forEach(el=>io.observe(el));})();</script>
+</body>
+</html>

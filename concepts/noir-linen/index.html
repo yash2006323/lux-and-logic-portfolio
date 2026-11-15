@@ -1,0 +1,133 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Noir & Linen â€” Fashion Boutique Concept | Lux and Logic</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;700;900&family=Cormorant+Garamond:ital,wght@0,500;1,500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f2f0ec;--ink:#111;--muted:#5e5e5a;--line:#d8d4cc;--accent:#111}
+*{box-sizing:border-box} html{scroll-behavior:smooth}
+body{margin:0;font-family:"Archivo",system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.45;overflow-x:hidden}
+img{max-width:100%;display:block}
+.wrap{max-width:1280px;margin:0 auto;padding:0 24px}
+header{position:fixed;top:0;left:0;right:0;z-index:40;mix-blend-mode:difference;color:#fff}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:18px 24px}
+.brand{font-weight:900;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;font-size:14px}
+nav a{color:#fff;text-decoration:none;margin-left:18px;font-weight:700;font-size:12px;letter-spacing:.08em;text-transform:uppercase}
+.hero{min-height:100vh;display:grid;grid-template-columns:1fr 1fr}
+.hero-left{padding:120px 40px 60px 24px;display:flex;flex-direction:column;justify-content:flex-end;border-right:1px solid var(--line);background:var(--bg)}
+.kicker{font-size:12px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;margin-bottom:16px}
+h1{font-size:clamp(48px,7vw,110px);line-height:.86;letter-spacing:-.04em;margin:0 0 18px;font-weight:900;text-transform:uppercase}
+h1 i{font-family:"Cormorant Garamond",serif;font-weight:500;text-transform:none;letter-spacing:-.02em;font-size:1.05em}
+.lead{font-size:18px;color:var(--muted);max-width:520px;margin:0}
+.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:24px}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:14px 20px;text-decoration:none;font-weight:800;border:1px solid var(--ink);text-transform:uppercase;letter-spacing:.06em;font-size:12px;transition:transform .2s, background .25s, color .25s}
+.btn.primary{background:var(--ink);color:#fff}
+.btn.alt{background:transparent;color:var(--ink)}
+.btn:hover{transform:translateY(-2px)}
+.hero-right{position:relative;min-height:60vh}
+.hero-right img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+section{padding:60px 0;border-top:1px solid var(--line)}
+.head{display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:end;margin-bottom:22px}
+h2{font-size:clamp(34px,4.5vw,64px);line-height:.9;letter-spacing:-.03em;margin:0;text-transform:uppercase;font-weight:900}
+.sub{margin:0;color:var(--muted);font-size:17px;max-width:520px}
+.lookbook{display:grid;grid-template-columns:repeat(12,1fr);gap:10px}
+.tile{position:relative;overflow:hidden;background:#ddd;min-height:240px}
+.tile img{width:100%;height:100%;object-fit:cover;transition:transform 1s cubic-bezier(.2,.7,.2,1), filter .5s}
+.tile:hover img{transform:scale(1.05);filter:contrast(1.03)}
+.tile.a{grid-column:span 7;min-height:520px} .tile.b{grid-column:span 5;min-height:520px}
+.tile.c,.tile.d,.tile.e{grid-column:span 4}
+.cap{position:absolute;left:12px;bottom:12px;background:#fff;color:#111;padding:6px 10px;font-size:11px;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--line)}
+.panel{padding:26px}
+.panel + .panel{border-left:1px solid var(--line)}
+.panel h3{margin:0 0 10px;font-size:22px;text-transform:uppercase;letter-spacing:.02em}
+.row{display:flex;justify-content:space-between;gap:16px;padding:14px 0;border-bottom:1px solid var(--line);font-size:15px}
+.row:last-child{border-bottom:0} .row span{color:var(--muted)}
+.list{margin:0;padding-left:18px;color:var(--muted)} .list li{margin:8px 0}
+.cols{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:1px solid var(--line)}
+.col{padding:22px} .col + .col{border-left:1px solid var(--line)}
+.col h3{margin:0 0 8px;font-size:18px;text-transform:uppercase} .col p{margin:0;color:var(--muted)}
+.cta{display:grid;grid-template-columns:1.2fr .8fr;gap:20px;align-items:end}
+.note{margin-top:14px;color:var(--muted);font-size:14px} .note a,.panel a{color:var(--ink)}
+footer{padding:26px 0 40px;border-top:1px solid var(--line);color:var(--muted);font-size:14px}
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)}.reveal.in{opacity:1;transform:none}
+.stagger>*{opacity:0;transform:translateY(16px);transition:.6s ease}.stagger.in>*{opacity:1;transform:none}
+.stagger.in>*:nth-child(1){transition-delay:.04s}.stagger.in>*:nth-child(2){transition-delay:.1s}.stagger.in>*:nth-child(3){transition-delay:.16s}.stagger.in>*:nth-child(4){transition-delay:.22s}.stagger.in>*:nth-child(5){transition-delay:.22s}
+@media(max-width:1000px){.hero{grid-template-columns:1fr;min-height:auto}.hero-left{border-right:0;padding:110px 24px 30px}.hero-right{min-height:55vh}.head,.cta{grid-template-columns:1fr}.split,.cols{grid-template-columns:1fr}.panel+.panel,.col+.col{border-left:0;border-top:1px solid var(--line)}.tile.a,.tile.b,.tile.c,.tile.d,.tile.e{grid-column:span 6;min-height:260px}}
+@keyframes marq{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@media(max-width:640px){.nav nav{display:none}.tile.a,.tile.b,.tile.c,.tile.d,.tile.e{grid-column:span 12}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal,.stagger>*{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<header><div class="nav"><a class="brand" href="../../index.html">Lux & Logic</a><nav><a href="#lookbook">Lookbook</a><a href="#collections">Collections</a><a href="#contact">Contact</a></nav></div></header>
+<main>
+  <section class="hero" style="border-top:0;padding:0">
+    <div class="hero-left">
+      <div class="kicker reveal">Concept Â· Fashion Boutique</div>
+      <h1 class="reveal">Noir & <i>Linen</i></h1>
+      <p class="lead reveal">An editorial boutique presence â€” stark, refined, and intentional. Built to showcase collections, tell a brand story, and drive visits, bookings, and enquiries.</p>
+      <div class="actions reveal">
+        <a class="btn primary" href="#collections">Explore collection</a>
+        <a class="btn alt" href="mailto:syashvardhan00714@gmail.com?subject=QUOTE%20-%20Boutique%20Website%20(Noir%20%26%20Linen%20concept)">Email for a quote</a>
+      </div>
+      <p class="note reveal">Email: <a href="mailto:syashvardhan00714@gmail.com">syashvardhan00714@gmail.com</a></p>
+    </div>
+    <div class="hero-right reveal"><img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=1400&q=80" alt="Editorial fashion display"></div>
+  </section>
+
+  <section id="lookbook"><div class="wrap">
+    <div class="head reveal"><h2>Lookbook,<br>not clutter</h2><p class="sub">Gestalt spacing, decisive imagery, and restrained motion â€” so every piece gets room to speak.</p></div>
+    <div class="lookbook stagger">
+      <div class="tile a"><img src="https://images.unsplash.com/photo-1469334031218-e382a71b716b?auto=format&fit=crop&w=1400&q=80" alt="New season edit"><div class="cap">New season edit</div></div>
+      <div class="tile b"><img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=1000&q=80" alt="Essentials"><div class="cap">Essentials</div></div>
+      <div class="tile c"><img src="https://images.unsplash.com/photo-1445205170230-053b83016050?auto=format&fit=crop&w=900&q=80" alt="Outerwear"><div class="cap">Outerwear</div></div>
+      <div class="tile d"><img src="https://images.unsplash.com/photo-1523381210434-271e8be1f52b?auto=format&fit=crop&w=900&q=80" alt="Linen sets"><div class="cap">Linen sets</div></div>
+      <div class="tile e"><img src="https://images.unsplash.com/photo-1492707892479-7bc8d5a4ee93?auto=format&fit=crop&w=900&q=80" alt="Accessories"><div class="cap">Accessories</div></div>
+    </div>
+  </div></section>
+
+  <section id="collections"><div class="wrap">
+    <div class="head reveal"><h2>Collection<br>clarity</h2><p class="sub">Curated browsing with the details that matter: materials, fit cues, and price â€” no noise.</p></div>
+    <div class="split reveal">
+      <div class="panel"><h3>Featured pieces</h3>
+        <div class="row"><div>Tailored Linen Blazer</div><span>â‚¬129</span></div>
+        <div class="row"><div>Relaxed Wide-Leg Trouser</div><span>â‚¬89</span></div>
+        <div class="row"><div>Silk Blend Midi Dress</div><span>â‚¬149</span></div>
+        <div class="row"><div>Structured Cotton Shirt</div><span>â‚¬69</span></div>
+        <div class="row"><div>Everyday Leather Tote</div><span>â‚¬79</span></div>
+        <p class="note">Filters, size guides, cart, and policies included in production builds.</p>
+      </div>
+      <div class="panel"><h3>Visit / enquire</h3>
+        <ul class="list">
+          <li><strong>Showroom:</strong> Sample Quarter, Your City</li>
+          <li><strong>Hours:</strong> Tueâ€“Sat 11:00â€“19:00</li>
+          <li><strong>Services:</strong> Styling appointments, private viewings, gifting</li>
+        </ul>
+        <div class="actions" style="margin-top:16px"><a class="btn primary" href="mailto:syashvardhan00714@gmail.com?subject=Enquiry%20-%20Noir%20%26%20Linen%20concept">Enquire / Book</a><a class="btn alt" href="#lookbook">Lookbook</a></div>
+        <p class="note">Or email <a href="mailto:syashvardhan00714@gmail.com">syashvardhan00714@gmail.com</a></p>
+      </div>
+    </div>
+  </div></section>
+
+  <section style="padding-top:0"><div class="wrap"><div class="reveal" style="border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:22px 0;display:flex;gap:30px;overflow:hidden;white-space:nowrap;font-size:clamp(22px,3vw,34px);font-weight:900;text-transform:uppercase;letter-spacing:-.02em"><div style="display:inline-flex;gap:30px;animation:marq 20s linear infinite"><span>New Season</span><span>â€”</span><span>Limited Pieces</span><span>â€”</span><span>Made to Last</span><span>â€”</span><span>New Season</span><span>â€”</span><span>Limited Pieces</span><span>â€”</span><span>Made to Last</span><span>â€”</span></div></div></div></section>
+
+  <section><div class="wrap">
+    <div class="cols stagger">
+      <div class="col"><h3>Brand story</h3><p>Timeless silhouettes and considered materials, presented with restraint and intent.</p></div>
+      <div class="col"><h3>Motion, refined</h3><p>Editorial transitions and micro-feedback â€” premium motion standard in every Lux and Logic plan.</p></div>
+      <div class="col"><h3>Trust & clarity</h3><p>Policies, sizing, and contact paths that make decisions effortless.</p></div>
+    </div>
+  </div></section>
+
+  <section id="contact"><div class="wrap cta reveal">
+    <div><h2>Want a website that fits your boutique?</h2><p class="note" style="font-size:16px;margin-top:8px">Lux and Logic Â· Premium motion standard Â· From â‚¹15,000â€“â‚¹20,000 INR (local-currency quote w/ FX rate/date) Â· Revisions â‚¹1,000 INR/hr</p></div>
+    <div><div class="actions"><a class="btn primary" href="mailto:syashvardhan00714@gmail.com?subject=QUOTE%20-%20Boutique%20Website%20(Noir%20%26%20Linen%20concept)">Email for a quote</a><a class="btn alt" href="../../index.html">Back to portfolio</a></div><p class="note">Email: <a href="mailto:syashvardhan00714@gmail.com">syashvardhan00714@gmail.com</a></p></div>
+  </div></section>
+</main>
+<footer><div class="wrap">Concept by Lux and Logic Â· Noir & Linen Â· Photos via Unsplash Â· <a href="mailto:syashvardhan00714@gmail.com">syashvardhan00714@gmail.com</a></div></footer>
+<script>(function(){const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});document.querySelectorAll('.reveal,.stagger').forEach(el=>io.observe(el));})();</script>
+</body>
+</html>

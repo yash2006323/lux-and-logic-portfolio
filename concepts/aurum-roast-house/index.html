@@ -1,0 +1,135 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Aurum Roast House â€” Specialty CafÃ© Concept | Lux and Logic</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f3ede3;--paper:#fffaf2;--ink:#1f1711;--muted:#6f6256;--espresso:#3b2416;--crema:#d9a441;--olive:#5d6b4f;--line:#e4d8c8}
+*{box-sizing:border-box} html{scroll-behavior:smooth}
+body{margin:0;font-family:"Manrope",system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6;overflow-x:hidden}
+img{max-width:100%;display:block}
+.wrap{max-width:1180px;margin:0 auto;padding:0 22px}
+header{position:sticky;top:0;z-index:30;background:rgba(243,237,227,.78);backdrop-filter:blur(12px);border-bottom:1px solid rgba(59,36,22,.12)}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0;gap:14px}
+.brand{font-family:"Cormorant Garamond",serif;font-size:30px;font-weight:700;color:var(--espresso);text-decoration:none}
+nav a{color:var(--muted);text-decoration:none;margin-left:16px;font-weight:700;font-size:14px} nav a:hover{color:var(--ink)}
+.hero{padding:26px 0 10px}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:18px;align-items:stretch}
+.hero-copy{background:var(--paper);border:1px solid var(--line);border-radius:28px;padding:34px;position:relative;overflow:hidden}
+.hero-copy::before{content:"";position:absolute;width:260px;height:260px;border-radius:50%;background:radial-gradient(circle, rgba(217,164,65,.28), transparent 70%);right:-80px;top:-80px}
+.kicker{display:inline-block;font-size:12px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--olive);margin-bottom:12px}
+h1{font-family:"Cormorant Garamond",serif;font-size:clamp(44px,6vw,74px);line-height:.95;margin:0 0 14px;color:var(--espresso)}
+.lead{color:var(--muted);font-size:18px;margin:0;max-width:560px}
+.actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 18px;border-radius:999px;text-decoration:none;font-weight:800;border:1px solid transparent;transition:transform .2s, box-shadow .25s}
+.btn.primary{background:var(--espresso);color:#fff7eb;box-shadow:0 12px 26px rgba(59,36,22,.18)}
+.btn.alt{background:#fff;border-color:var(--line);color:var(--espresso)}
+.btn:hover{transform:translateY(-2px)}
+.hero-media{border-radius:28px;overflow:hidden;min-height:520px;border:1px solid var(--line);position:relative}
+.hero-media img{width:100%;height:100%;object-fit:cover;transform:scale(1.03);transition:transform 1.2s ease}
+.hero-media:hover img{transform:scale(1.08)}
+.stamp{position:absolute;left:18px;bottom:18px;background:rgba(31,23,17,.72);color:#fff;padding:10px 14px;border-radius:14px;font-size:13px;backdrop-filter:blur(6px)}
+section{padding:36px 0}
+h2{font-family:"Cormorant Garamond",serif;font-size:46px;line-height:1;margin:0 0 10px;color:var(--espresso)}
+.sub{margin:0 0 16px;color:var(--muted)}
+.features{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:20px;padding:18px}
+.card h3{margin:0 0 6px;font-size:18px} .card p{margin:0;color:var(--muted);font-size:14px}
+.split{display:grid;grid-template-columns:1.1fr .9fr;gap:16px}
+.panel{background:var(--paper);border:1px solid var(--line);border-radius:22px;padding:20px}
+.menu{display:grid;grid-template-columns:1fr 1fr;gap:8px 18px}
+.item{display:flex;justify-content:space-between;gap:12px;padding:10px 0;border-bottom:1px dashed #d9cbb8;font-size:15px}
+.item span{color:var(--espresso);font-weight:800}
+.gallery{display:grid;grid-template-columns:1.2fr .8fr .8fr;gap:12px}
+.g{border-radius:20px;overflow:hidden;border:1px solid var(--line);min-height:220px;position:relative}
+.g.tall{grid-row:span 2;min-height:452px}
+.g img{width:100%;height:100%;object-fit:cover;transition:transform .9s ease} .g:hover img{transform:scale(1.06)}
+.cap{position:absolute;left:12px;bottom:12px;background:rgba(255,250,242,.9);padding:6px 10px;border-radius:999px;font-size:12px;font-weight:800;color:var(--espresso)}
+.banner{background:var(--espresso);color:#fff6e8;border-radius:26px;padding:28px;display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap}
+.banner p{margin:6px 0 0;color:#e8dccb}
+.banner .btn.primary{background:var(--crema);color:#2a1b10;box-shadow:none}
+.banner .btn.alt{background:transparent;color:#fff;border-color:rgba(255,255,255,.35)}
+footer{padding:24px 0 36px;color:var(--muted);font-size:14px}
+.email-note{margin-top:10px;font-size:14px;color:var(--muted)} .email-note a{color:var(--espresso);font-weight:700}
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}.reveal.in{opacity:1;transform:none}
+.stagger>*{opacity:0;transform:translateY(14px);transition:.55s ease}.stagger.in>*{opacity:1;transform:none}
+.stagger.in>*:nth-child(1){transition-delay:.04s}.stagger.in>*:nth-child(2){transition-delay:.1s}.stagger.in>*:nth-child(3){transition-delay:.16s}.stagger.in>*:nth-child(4){transition-delay:.22s}
+@media(max-width:980px){.hero-grid,.split{grid-template-columns:1fr}.hero-media{min-height:380px}.features{grid-template-columns:1fr 1fr}.gallery{grid-template-columns:1fr 1fr}.g.tall{grid-row:auto;min-height:220px}}
+@media(max-width:640px){.features,.menu,.gallery{grid-template-columns:1fr} nav a{margin-left:10px}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal,.stagger>*{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<header><div class="wrap nav"><a class="brand" href="../../index.html">Lux & Logic</a><nav><a href="#menu">Menu</a><a href="#visit">Visit</a><a href="#contact">Contact</a></nav></div></header>
+<main>
+  <section class="hero"><div class="wrap hero-grid">
+    <div class="hero-copy reveal">
+      <div class="kicker">Concept Â· Specialty CafÃ©</div>
+      <h1>Aurum Roast House</h1>
+      <p class="lead">A warm, sensory cafÃ© experience designed to turn curiosity into visits â€” with scannable menus, clear hours, and frictionless catering enquiries.</p>
+      <div class="actions">
+        <a class="btn primary" href="#menu">Explore menu</a>
+        <a class="btn alt" href="#visit">Find us</a>
+        <a class="btn alt" href="mailto:syashvardhan00714@gmail.com?subject=QUOTE%20-%20Cafe%20Website%20(Aurum%20Roast%20House%20concept)">Email for a quote</a>
+      </div>
+      <p class="email-note">Email: <a href="mailto:syashvardhan00714@gmail.com">syashvardhan00714@gmail.com</a></p>
+    </div>
+    <div class="hero-media reveal"><img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=1400&q=80" alt="Warm specialty coffee shop interior"><div class="stamp">Open daily Â· Crafted brews Â· Community table</div></div>
+  </div></section>
+
+  <section><div class="wrap features stagger">
+    <div class="card"><h3>Signature roasts</h3><p>Single-origin pours and seasonal blends with story-led tasting notes.</p></div>
+    <div class="card"><h3>Brunch & bakes</h3><p>Fresh pastries and plates presented for quick, appetizing choices.</p></div>
+    <div class="card"><h3>Work-friendly</h3><p>Calm seating, clear info, and a space that invites lingering.</p></div>
+    <div class="card"><h3>Catering</h3><p>Simple enquiry paths for offices, meetups, and private gatherings.</p></div>
+  </div></section>
+
+  <section style="padding-top:0"><div class="wrap"><div class="panel reveal" style="display:flex;gap:18px;align-items:center;justify-content:space-between;flex-wrap:wrap;background:linear-gradient(135deg,#fff7ea,#f1e6d4)">
+    <div><div class="kicker" style="margin-bottom:6px">Today at the bar</div><h2 style="font-size:36px;margin:0">Seasonal: Honeycomb oat latte &amp; cardamom bun</h2><p class="sub" style="margin:6px 0 0">A rotating feature strip â€” perfect for specials, events, or limited drops.</p></div>
+    <a class="btn primary" href="#menu">See full menu</a>
+  </div></div></section>
+
+  <section id="menu"><div class="wrap split">
+    <div class="panel reveal"><h2>Menu highlights</h2><p class="sub">Designed for fast scanning on mobile â€” categories, favorites, and clear pricing cues.</p>
+      <div class="menu">
+        <div class="item"><div>Espresso / Americano</div><span>from â‚¬3.00</span></div>
+        <div class="item"><div>Flat White</div><span>â‚¬4.20</span></div>
+        <div class="item"><div>Seasonal Pour Over</div><span>â‚¬4.80</span></div>
+        <div class="item"><div>Cold Brew Tonic</div><span>â‚¬5.20</span></div>
+        <div class="item"><div>Butter Croissant</div><span>â‚¬3.50</span></div>
+        <div class="item"><div>Avocado Toast</div><span>â‚¬8.90</span></div>
+        <div class="item"><div>House Granola Bowl</div><span>â‚¬7.50</span></div>
+        <div class="item"><div>Weekend Brunch Plate</div><span>â‚¬11.50</span></div>
+      </div>
+    </div>
+    <div class="panel reveal" id="visit"><h2>Visit & hours</h2><p class="sub">Everything a guest needs before they step out the door.</p>
+      <p><strong>Monâ€“Fri</strong> 7:30â€“18:00<br><strong>Satâ€“Sun</strong> 8:30â€“17:00</p>
+      <p><strong>Address:</strong> Sample District, Your City<br><strong>Phone:</strong> +00 000 000 000<br><strong>Email:</strong> <a href="mailto:syashvardhan00714@gmail.com">syashvardhan00714@gmail.com</a></p>
+      <div class="actions"><a class="btn primary" href="mailto:syashvardhan00714@gmail.com?subject=Catering%20Enquiry%20-%20Aurum%20Roast%20House%20concept">Catering enquiry</a><a class="btn alt" href="#contact">Contact</a></div>
+    </div>
+  </div></section>
+
+  <section><div class="wrap">
+    <h2 class="reveal">Atmosphere</h2><p class="sub reveal">A gallery that sells the feeling â€” craft, warmth, and community.</p>
+    <div class="gallery stagger">
+      <div class="g tall"><img src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?auto=format&fit=crop&w=1200&q=80" alt="Latte art pour"><div class="cap">Latte art</div></div>
+      <div class="g"><img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=900&q=80" alt="Coffee and beans"><div class="cap">Roast craft</div></div>
+      <div class="g"><img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=900&q=80" alt="Cozy cafÃ© seating"><div class="cap">Cozy seating</div></div>
+      <div class="g"><img src="https://images.unsplash.com/photo-1497935586351-b67a49e012bf?auto=format&fit=crop&w=900&q=80" alt="Brunch table"><div class="cap">Brunch moments</div></div>
+      <div class="g"><img src="https://images.unsplash.com/photo-1453614512568-c4024d13c247?auto=format&fit=crop&w=900&q=80" alt="CafÃ© exterior vibe"><div class="cap">Neighbourhood spot</div></div>
+    </div>
+  </div></section>
+
+  <section id="contact"><div class="wrap banner reveal">
+    <div><h2 style="color:#fff6e8;margin:0;font-size:40px">Want a website like this for your café?</h2><p>Lux and Logic Â· Premium motion standard Â· From â‚¹15,000â€“â‚¹20,000 INR (local-currency quote w/ FX rate/date) Â· Revisions â‚¹1,000 INR/hr</p></div>
+    <div class="actions"><a class="btn primary" href="mailto:syashvardhan00714@gmail.com?subject=QUOTE%20-%20Cafe%20Website%20(Aurum%20Roast%20House%20concept)">Email for a quote</a><a class="btn alt" href="../../index.html">Back to portfolio</a></div>
+  </div></section>
+</main>
+<footer><div class="wrap">Concept by Lux and Logic Â· Aurum Roast House Â· Photos via Unsplash Â· Contact: <a href="mailto:syashvardhan00714@gmail.com">syashvardhan00714@gmail.com</a></div></footer>
+<script>
+(function(){const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});document.querySelectorAll('.reveal,.stagger').forEach(el=>io.observe(el));})();
+</script>
+</body>
+</html>
