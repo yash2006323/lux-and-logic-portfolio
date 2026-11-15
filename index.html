@@ -1,0 +1,217 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lux and Logic â€” Cinematic Websites for Modern Brands</title>
+<meta name="description" content="Lux and Logic builds premium, motion-rich websites for cafÃ©s, salons, bakeries, and boutiques. Immersive design, clear conversion, standard in every plan.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#050507;--fg:#f5f2ec;--muted:#b8b2a7;--line:rgba(245,242,236,.14);--gold:#d6b46a;--ember:#ff7a3d}
+*{box-sizing:border-box} html{scroll-behavior:smooth}
+body{margin:0;font-family:"Manrope",system-ui,sans-serif;background:var(--bg);color:var(--fg);line-height:1.5;overflow-x:hidden}
+img{max-width:100%;display:block} a{color:inherit}
+.progress{position:fixed;top:0;left:0;height:3px;width:0;background:linear-gradient(90deg,var(--gold),#fff0c7,var(--ember));z-index:100;box-shadow:0 0 18px rgba(214,180,106,.6)}
+.noise{position:fixed;inset:0;pointer-events:none;z-index:2;opacity:.06;background-image:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="140" height="140"><filter id="n"><feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="2" stitchTiles="stitch"/></filter><rect width="100%" height="100%" filter="url(%23n)" opacity=".5"/></svg>')}
+header{position:fixed;top:0;left:0;right:0;z-index:50;padding:18px 26px;display:flex;align-items:center;justify-content:space-between;mix-blend-mode:difference;color:#fff}
+.brand{font-weight:800;letter-spacing:.18em;text-transform:uppercase;font-size:12px;text-decoration:none}
+nav a{color:#fff;text-decoration:none;margin-left:18px;font-size:12px;letter-spacing:.12em;text-transform:uppercase;font-weight:700;opacity:.9}
+.hero{position:relative;min-height:100vh;display:flex;align-items:flex-end;padding:0 26px 60px;overflow:hidden}
+.layer{position:absolute;inset:-5%}
+.bg{background:url('https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=2000&q=80') center/cover no-repeat;transform:scale(1.08);filter:saturate(.9) contrast(1.05) brightness(.55);animation:ken 24s ease-in-out infinite alternate}
+.grad{background:radial-gradient(900px 500px at 70% 20%, rgba(214,180,106,.18), transparent 60%),linear-gradient(to top, rgba(5,5,7,.95) 10%, rgba(5,5,7,.35) 55%, rgba(5,5,7,.55) 100%)}
+.glow{background:radial-gradient(500px 300px at 20% 80%, rgba(255,122,61,.12), transparent 70%)}
+.hero-inner{position:relative;z-index:5;max-width:1280px;width:100%;margin:0 auto}
+.kicker{display:inline-flex;align-items:center;gap:10px;font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:#efe6d3;margin-bottom:14px}
+.kicker::before{content:"";width:28px;height:1px;background:var(--gold)}
+h1{font-family:"Bebas Neue",sans-serif;font-size:clamp(64px,11vw,170px);line-height:.86;letter-spacing:.02em;margin:0 0 10px;font-weight:400}
+h1 span{display:block;color:transparent;-webkit-text-stroke:1px rgba(245,242,236,.65)}
+.sub{max-width:720px;font-size:clamp(18px,2vw,22px);color:var(--muted);margin:0 0 24px}
+.actions{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:14px 22px;border-radius:999px;text-decoration:none;font-weight:800;letter-spacing:.04em;border:1px solid transparent;transition:transform .25s, box-shadow .3s, background .3s}
+.btn.primary{background:linear-gradient(135deg,var(--gold),#f3ddb0);color:#1a1408;box-shadow:0 12px 30px rgba(214,180,106,.22)}
+.btn.ghost{border-color:rgba(245,242,236,.28);background:rgba(255,255,255,.04);backdrop-filter:blur(6px)}
+.btn:hover{transform:translateY(-2px)}
+.scrollcue{margin-top:26px;display:inline-flex;align-items:center;gap:10px;color:#d8d1c3;font-size:12px;letter-spacing:.16em;text-transform:uppercase}
+.scrollcue i{width:1px;height:34px;background:linear-gradient(to bottom, #fff, transparent);display:inline-block;animation:drop 1.8s infinite}
+section{position:relative;padding:90px 26px}
+.wrap{max-width:1280px;margin:0 auto}
+.chapter{display:grid;grid-template-columns:.9fr 1.1fr;gap:26px;align-items:center}
+.label{font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:10px}
+h2{font-family:"Bebas Neue",sans-serif;font-size:clamp(44px,6vw,86px);line-height:.9;letter-spacing:.02em;margin:0 0 12px;font-weight:400}
+p.lead{color:var(--muted);font-size:18px;margin:0;max-width:620px}
+.frame{position:relative;border-radius:26px;overflow:hidden;border:1px solid var(--line);min-height:520px;box-shadow:0 30px 80px rgba(0,0,0,.45)}
+.frame img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1.05)}
+.frame::after{content:"";position:absolute;inset:0;background:linear-gradient(to top, rgba(5,5,7,.35), transparent 40%)}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:22px}
+.stat{border:1px solid var(--line);border-radius:18px;padding:16px;background:rgba(255,255,255,.02)}
+.stat strong{display:block;font-family:"Bebas Neue",sans-serif;font-size:40px;letter-spacing:.02em;color:#fff2d3;line-height:1}
+.stat span{color:var(--muted);font-size:13px}
+.cinema-band{min-height:70vh;display:flex;align-items:center;justify-content:center;text-align:center;overflow:hidden}
+.cinema-band .layer.bg2{background:url('https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=2000&q=80') center/cover no-repeat;filter:brightness(.45) saturate(.9);transform:scale(1.1)}
+.cinema-band .grad2{background:linear-gradient(to bottom, rgba(5,5,7,.8), rgba(5,5,7,.45), rgba(5,5,7,.9))}
+.quote{position:relative;z-index:3;max-width:1000px}
+.quote h2{font-size:clamp(40px,6vw,92px)} .quote p{color:#ddd6c8;font-size:18px}
+.work-head{display:flex;align-items:flex-end;justify-content:space-between;gap:20px;margin-bottom:10px}
+.work-head .count{font-family:"Bebas Neue",sans-serif;font-size:28px;color:var(--muted);letter-spacing:.04em}
+.work-list{margin-top:18px;border-top:1px solid var(--line)}
+.work-item{position:relative;display:grid;grid-template-columns:1fr auto;align-items:center;gap:20px;padding:26px 0;border-bottom:1px solid var(--line);text-decoration:none;overflow:hidden;isolation:isolate}
+.work-item .meta{display:flex;flex-direction:column;gap:6px;position:relative;z-index:3;transition:transform .5s cubic-bezier(.2,.7,.2,1)}
+.work-item .name{font-family:"Bebas Neue",sans-serif;font-size:clamp(42px,6vw,84px);line-height:.9;letter-spacing:.02em;font-weight:400;margin:0}
+.work-item .cat{font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+.work-item .arrow{font-size:28px;color:var(--muted);position:relative;z-index:3;transition:transform .35s ease, color .35s ease}
+.work-item .preview{position:absolute;right:8%;top:50%;width:min(420px,38vw);aspect-ratio:16/10;border-radius:16px;overflow:hidden;opacity:0;transform:translate(20px,-50%) scale(.96) rotate(1deg);transition:opacity .5s ease, transform .6s cubic-bezier(.2,.7,.2,1);z-index:1;border:1px solidrgba(245,242,236,.18);box-shadow:0 30px 70px rgba(0,0,0,.5)}
+.work-item .preview img{width:100%;height:100%;object-fit:cover;filter:brightness(.85) saturate(1.05)}
+.work-item::before{content:"";position:absolute;inset:-20% -10%;background:radial-gradient(600px 120px at var(--mx,70%) 50%, rgba(214,180,106,.08), transparent 60%);opacity:0;transition:opacity .4s ease;z-index:0}
+.work-item:hover .preview,.work-item:focus-visible .preview{opacity:1;transform:translate(0,-50%) scale(1) rotate(0deg)}
+.work-item:hover .meta{transform:translateX(8px)}
+.work-item:hover .arrow{transform:translate(4px,-4px);color:var(--fg)}
+.work-item:hover::before{opacity:1}
+.work-item:hover .name{color:#fff}
+@media(max-width:900px){.work-item{grid-template-columns:1fr;gap:10px;padding:22px 0}.work-item .preview{position:relative;right:auto;top:auto;width:100%;max-width:none;aspect-ratio:16/9;opacity:1;transform:none;border-radius:14px;margin-top:8px}.work-item:hover .meta{transform:none}.work-item .arrow{display:none}}
+.offer{display:grid;grid-template-columns:1.1fr .9fr;gap:16px}
+.panel{border:1px solid var(--line);border-radius:22px;padding:24px;background:linear-gradient(180deg,rgba(255,255,255,.03),rgba(255,255,255,.015))}
+.panel h3{font-family:"Bebas Neue",sans-serif;font-size:42px;line-height:.95;margin:0 0 10px;font-weight:400}
+.panel li,.panel p{color:var(--muted)} ul{margin:10px 0 0 18px} li{margin:7px 0}
+.final{min-height:60vh;display:flex;align-items:center;justify-content:center;text-align:center;border-top:1px solid var(--line);overflow:hidden}
+.final .bg3{background:url('https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?auto=format&fit=crop&w=2000&q=80') center/cover no-repeat;filter:brightness(.35) saturate(.85);transform:scale(1.08)}
+.final .grad3{background:radial-gradient(700px 300px at 50% 30%, rgba(214,180,106,.16), transparent 60%),linear-gradient(to top, rgba(5,5,7,.9), rgba(5,5,7,.55))}
+.email-note{margin-top:12px;color:var(--muted);font-size:14px} .email-note a{color:#fff;text-decoration:underline;text-underline-offset:3px}
+footer{padding:26px;border-top:1px solid var(--line);color:var(--muted);text-align:center}
+.reveal{opacity:0;transform:translateY(30px);transition:opacity .9s cubic-bezier(.2,.7,.2,1), transform .9s cubic-bezier(.2,.7,.2,1)}
+.reveal.in{opacity:1;transform:none}
+@keyframes ken{from{transform:scale(1.08) translate(0,0)}to{transform:scale(1.16) translate(-2%, -2%)}}
+@keyframes drop{0%{opacity:0;transform:scaleY(.2)}40%{opacity:1}100%{opacity:0;transform:translateY(10px) scaleY(.6)}}
+@media(max-width:980px){.chapter,.offer{grid-template-columns:1fr}.card{grid-column:span 12;min-height:380px}.stats{grid-template-columns:1fr 1fr} header nav{display:none} .frame{min-height:360px}}
+@media(max-width:640px){.stats{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<div class="progress" id="progress"></div>
+<div class="noise"></div>
+<header>
+  <a class="brand" href="index.html">Lux & Logic</a>
+  <nav><a href="#story">Story</a><a href="#work">Work</a><a href="#contact">Contact</a></nav>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="layer bg" data-speed="0.25"></div>
+    <div class="layer grad"></div>
+    <div class="layer glow" data-speed="0.12"></div>
+    <div class="hero-inner">
+      <div class="kicker reveal">Premium motion-rich websites Â· Standard in every plan</div>
+      <h1 class="reveal">Lux & Logic<br><span>Cinematic by Design</span></h1>
+      <p class="sub reveal">We build immersive, high-converting websites for cafÃ©s, salons, bakeries, and boutiques â€” where craft, motion, and clarity move as one.</p>
+      <div class="actions reveal">
+        <a class="btn primary" href="mailto:syashvardhan00714@gmail.com?subject=QUOTE%20-%20Lux%20and%20Logic%20Website%20Concept">Email for a quote</a>
+        <a class="btn ghost" href="#work">See our work</a>
+      </div>
+      <p class="email-note reveal">If the email button doesnâ€„t open, write to <a href="mailto:syashvardhan00714@gmail.com">syashvardhan00714@gmail.com</a></p>
+      <div class="scrollcue reveal"><i></i> Scroll to explore</div>
+    </div>
+  </section>
+
+  <section id="story"><div class="wrap chapter">
+    <div class="reveal">
+      <div class="label">Chapter I â€” The Approach</div>
+      <h2>Not just pages.<br>Presence.</h2>
+      <p class="lead">Every Lux and Logic build is designed like a scene: atmosphere, rhythm, and detail guiding visitors from first impression to action. Premium motion graphics and micro-interactions arenâ€Ⅎt extras â€” they€•re the language we speak, in every plan.</p>
+      <div class="stats">
+        <div class="stat"><strong>4</strong><span>Core SME niches crafted with intent</span></div>
+        <div class="stat"><strong>¹15k+</strong><span>Packages from ₹15“20k INR (local FX quote)</span></div>
+        <div class="stat"><strong>100%</strong><span>Plans include premium motion</span></div>
+        <div class="stat"><strong>1:1</strong><span>Tailored concepts per brand</span></div>
+      </div>
+    </div>
+    <div class="frame reveal" data-parallax><img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1600&q=80" alt="Cinematic workspace and design craft"></div>
+  </div></section>
+
+  <section class="cinema-band">
+    <div class="layer bg2" data-speed="0.18"></div>
+    <div class="layer grad2"></div>
+    <div class="quote reveal">
+      <div class="label" style="color:#f0ddb0">Chapter II â€” The Feeling</div>
+      <h2>Make them feel it<br>before they read it.</h2>
+      <p>Immersive visuals, purposeful motion, and clear paths to visit, book, order, or enquire â€” so beauty and business never compete.</p>
+    </div>
+  </section>
+
+  <section id="work"><div class="wrap">
+    <div class="work-head reveal">
+      <div>
+        <div class="label">Chapter III â€” Selected Concepts</div>
+        <h2>Work</h2>
+        <p class="lead">Four niches, four identities â€” distinct systems, one premium motion standard.</p>
+      </div>
+      <div class="count">04 concepts</div>
+    </div>
+    <div class="work-list">
+      <a class="work-item reveal" href="concepts/aurum-roast-house/index.html">
+        <div class="meta"><h3 class="name">Aurum Roast House</h3><div class="cat">Specialty CafÃ© / Website concept</div></div>
+        <div class="arrow">↗</div>
+        <div class="preview"><img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=1000&q=80" alt=""></div>
+      </a>
+      <a class="work-item reveal" href="concepts/lumen-studio-salon/index.html">
+        <div class="meta"><h3 class="name">Lumen Studio Salon</h3><div class="cat">Hair & Beauty / Identity & website concept</div></div>
+        <div class="arrow">↗</div>
+        <div class="preview"><img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=1000&q=80" alt=""></div>
+      </a>
+      <a class="work-item reveal" href="concepts/maison-crumb/index.html">
+        <div class="meta"><h3 class="name">Maison Crumb</h3><div class="cat">Artisan Bakery / Website concept</div></div>
+        <div class="arrow">↗</div>
+        <div class="preview"><img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=1000&q=80" alt=""></div>
+      </a>
+      <a class="work-item reveal" href="concepts/noir-linen/index.html">
+        <div class="meta"><h3 class="name">Noir &amp; Linen</h3><div class="cat">Fashion Boutique / Identity & website concept</div></div>
+        <div class="arrow">↗</div>
+        <div class="preview"><img src="https://images.unsplash.com/photo-1469334031218-e382a71b716b?auto=format&fit=crop&w=1000&q=80" alt=""></div>
+      </a>
+    </div>
+  </div></section>
+
+  <section><div class="wrap offer" id="contact">
+    <div class="panel reveal"><div class="label">Chapter IV â€” The Offer</div><h3>Premium, transparent, built for you.</h3><p>For SMEs worldwide (current outreach focus: Europe & US). Hosting currently on founder’s laptop for early projects (availability constraints disclosed).</p><ul>
+      <li><strong>Premium motion & micro-interactions standard</strong> in all plans</li>
+      <li><strong>Packages from ₹15,000‐₹20,000 INR</strong>, quoted in client’s local currency with FX rate/date on proposal & invoice</li>
+      <li><strong>Revisions at ₹1,000 INR/hour</strong></li>
+      <li>Mobile-first, lead-focused UX (visit, book, order, enquire)</li>
+      <li>On proceed: photos/images, preferred color scheme, and layout/style</li>
+    </ul></div>
+    <div class="panel reveal"><div class="label">Contact</div><h3>Want a website like this?</h3><p>Tell me about your business and what you need. I'll reply with a simple idea and a quote for your website.</p>
+      <div class="actions" style="margin-top:16px"><a class="btn primary" href="mailto:syashvardhan00714@gmail.com?subject=QUOTE%20-%20Lux%20and%20Logic%20Website%20Concept">Email for a quote</a></div>
+      <p class="email-note">Email: <a href="mailto:syashvardhan00714@gmail.com">syashvardhan00714@gmail.com</a><br>Yashvardhan Singh, Founder — Lux and Logic</p>
+    </div>
+  </div></section>
+
+  <section class="final">
+    <div class="layer bg3" data-speed="0.15"></div>
+    <div class="layer grad3"></div>
+    <div class="wrap reveal" style="position:relative;z-index:3">
+      <div class="label" style="color:#f0ddb0">Finale</div>
+      <h2 style="font-family:'Bebas Neue',sans-serif;font-size:clamp(46px,7vw,100px);line-height:.88;margin:0 0 12px;font-weight:400">Your brand, in motion.</h2>
+      <p class="lead" style="margin:0 auto 22px;max-width:700px">Cinematic websites for cafés, salons, bakeries, and boutiques â€” crafted to be seen, felt, and remembered.</p>
+      <a class="btn primary" href="mailto:syashvardhan00714@gmail.com?subject=Quote%20request%20-%20Lux%20and%20Logic">Email me for a quote</a>
+      <p class="email-note">Or email: <a href="mailto:syashvardhan00714@gmail.com">syashvardhan00714@gmail.com</a></p>
+    </div>
+  </section>
+</main>
+<footer>© 2026 Lux and Logic · Cinematic, premium motion-rich websites · Photos via Unsplash</footer>
+
+<script>
+(function(){
+  const prog=document.getElementById('progress');
+  const onScroll=()=>{
+    const h=document.documentElement; const p=(h.scrollTop)/(h.scrollHeight-h.clientHeight)*100; prog.style.width=p+'%';
+    document.querySelectorAll('[data-speed]').forEach(el=>{const s=parseFloat(el.dataset.speed||0.2); el.style.transform=`translate3d(0, ${window.scrollY*s}px, 0) scale(1.08)`;});
+    document.querySelectorAll('[data-parallax] img').forEach(img=>{const r=img.parentElement.getBoundingClientRect(); const v=(window.innerHeight-r.top)/(window.innerHeight+r.height); img.style.transform=`scale(1.12) translateY(${(v-.5)*-30}px)`;});
+  };
+  window.addEventListener('scroll', onScroll, {passive:true}); onScroll();
+  const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.14});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+  document.querySelectorAll('.work-item').forEach(item=>{item.addEventListener('mousemove',(e)=>{const r=item.getBoundingClientRect();item.style.setProperty('--mx', ((e.clientX-r.left)/r.width*100)+'%');});});
+})();
+</script>
+</body>
+</html>
