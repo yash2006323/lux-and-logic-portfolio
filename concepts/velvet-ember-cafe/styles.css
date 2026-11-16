@@ -13,6 +13,8 @@ html, body { margin: 0; padding: 0; }
 body { font-family: Manrope, system-ui, -apple-system, Segoe UI, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; overflow-x: hidden; }
 img { max-width: 100%; display: block; }
 a { color: inherit; }
+h1, h2, h3, p, li, a, span { overflow-wrap: anywhere; }
+main { overflow: clip; }
 .skip { position: absolute; left: -999px; top: 8px; background: #fff; color: #111; padding: 8px 12px; border-radius: 8px; z-index: 50; }
 .skip:focus { left: 8px; }
 
@@ -28,7 +30,7 @@ a { color: inherit; }
 
 main, footer { position: relative; z-index: 2; }
 section[id] { scroll-margin-top: 96px; }
-.hero { min-height: 100svh; display: flex; align-items: center; justify-content: center; padding: 140px 24px 90px; position: relative; overflow: hidden; }
+.hero { min-height: 100vh; min-height: 100svh; display: flex; align-items: center; justify-content: center; padding: 148px 24px 96px; position: relative; overflow: hidden; }
 .hero-bg { position: absolute; inset: -5%; z-index: -1; background:
   radial-gradient(50% 40% at 50% 35%, rgba(201,122,74,0.22), transparent 60%),
   radial-gradient(40% 30% at 70% 60%, rgba(227,176,122,0.12), transparent 70%),
