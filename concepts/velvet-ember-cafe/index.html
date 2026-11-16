@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Velvet Ember Café — Concept</title>
+  <meta name="description" content="Velvet Ember Café — coffee, slow-brewed. Evenings, softly lit. Artisan coffee & small plates in a warm, cinematic atmosphere." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <a class="skip" href="#menu">Skip to menu</a>
+  <canvas id="atmosphere" aria-hidden="true"></canvas>
+  <div class="vignette" aria-hidden="true"></div>
+  <header class="site-header">
+    <div class="brand">Velvet Ember Café</div>
+    <nav aria-label="Primary">
+      <a href="#story">Story</a>
+      <a href="#menu">Menu</a>
+      <a href="#visit">Visit</a>
+      <a href="#reserve" class="nav-cta">Reserve</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="top">
+      <div class="hero-bg" aria-hidden="true"></div>
+      <div class="hero-content">
+        <p class="eyebrow reveal">Artisan coffee &amp; small plates</p>
+        <h1 class="reveal">Coffee, slow-brewed.<br><span>Evenings, softly lit.</span></h1>
+        <p class="lede reveal">An intimate café for unhurried mornings and warm nights — craft in every cup, calm in every corner.</p>
+        <div class="actions reveal">
+          <a class="btn primary" href="#menu">View Menu</a>
+          <a class="btn secondary" href="#reserve">Reserve a Table</a>
+          <a class="btn ghost" href="#visit">Visit Us</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="chapter" id="story">
+      <div class="wrap split">
+        <div class="copy reveal">
+          <p class="kicker">Chapter I — Story</p>
+          <h2>Craft, sourced with care</h2>
+          <p>We roast in small batches, pour with patience, and plate simple food made to linger over. Velvet Ember is a place for conversation, quiet work, and evenings that glow a little longer.</p>
+        </div>
+        <figure class="media-card reveal parallax" data-speed="0.08">
+          <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=1200&q=80" alt="Pour-over coffee being prepared" loading="lazy" />
+        </figure>
+      </div>
+    </section>
+
+    <section class="chapter alt" id="menu">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <p class="kicker">Chapter II — Signature Menu</p>
+          <h2>Highlights from the bar &amp; kitchen</h2>
+          <p class="sub">Scannable favorites — ask for today’s seasonal specials.</p>
+        </div>
+        <div class="menu-grid">
+          <article class="menu-item reveal"><h3>Ember Latte</h3><p>Espresso, smoked vanilla, textured milk</p><span>€5.50</span></article>
+          <article class="menu-item reveal"><h3>Velvet Cold Brew</h3><p>18-hour steep, cacao nib, orange peel</p><span>€5.00</span></article>
+          <article class="menu-item reveal"><h3>Cardamom Cortado</h3><p>Double shot, warm spice, silky finish</p><span>€4.20</span></article>
+          <article class="menu-item reveal"><h3>Toasted Brioche Plate</h3><p>Salted butter, seasonal jam, sea salt</p><span>€7.50</span></article>
+          <article class="menu-item reveal"><h3>Roasted Mushroom Tartine</h3><p>Herb ricotta, thyme oil, sourdough</p><span>€11.00</span></article>
+          <article class="menu-item reveal"><h3>Burnt Honey Panna Cotta</h3><p>Citrus, toasted almond crumb</p><span>€6.80</span></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="chapter" id="atmosphere">
+      <div class="wrap split reverse">
+        <div class="copy reveal">
+          <p class="kicker">Chapter III — Space</p>
+          <h2>Soft light, warm textures</h2>
+          <p>Natural wood, low glow, and room to breathe. Our space is designed to feel cinematic in mood, but always comfortable enough to stay awhile.</p>
+        </div>
+        <figure class="media-card reveal parallax" data-speed="0.06">
+          <img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=1200&q=80" alt="Warm café interior with soft lighting" loading="lazy" />
+        </figure>
+      </div>
+    </section>
+
+    <section class="chapter alt" id="visit">
+      <div class="wrap visit-grid">
+        <div class="reveal">
+          <p class="kicker">Visit</p>
+          <h2>Find us</h2>
+          <p><strong>Hours</strong><br>Mon–Fri: 8:00–22:00<br>Sat–Sun: 9:00–23:00</p>
+          <p><strong>Location</strong><br>12 Ember Lane, Old Town<br>Barcelona, ES (placeholder)</p>
+          <div class="actions left">
+            <a class="btn secondary" href="https://maps.google.com/?q=Barcelona" target="_blank" rel="noopener">Get Directions</a>
+          </div>
+        </div>
+        <div class="reserve-card reveal" id="reserve">
+          <p class="kicker">Reserve / Contact</p>
+          <h2>Save a table</h2>
+          <p>For reservations and private gatherings, reach us directly. We reply within one business day.</p>
+          <div class="contact-box">
+            <a class="btn primary" href="mailto:hello@velvetember.cafe?subject=Table%20Reservation">Reserve by Email</a>
+            <p class="email-fallback">Email: <a href="mailto:hello@velvetember.cafe">hello@velvetember.cafe</a></p>
+            <p class="small">Phone: +34 000 000 000 (placeholder)</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <div>
+        <div class="brand">Velvet Ember Café</div>
+        <p>Artisan coffee &amp; small plates.</p>
+      </div>
+      <div>
+        <p><strong>Hours</strong><br>Mon–Fri 8:00–22:00 · Sat–Sun 9:00–23:00</p>
+      </div>
+      <div>
+        <p><strong>Contact</strong><br><a href="mailto:hello@velvetember.cafe">hello@velvetember.cafe</a><br>12 Ember Lane, Old Town, Barcelona</p>
+        <p class="social">Instagram · Facebook · Maps (placeholders)</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/bundled/lenis.min.js"></script>
+  <script src="./main.js"></script>
+</body>
+</html>
