@@ -17,4 +17,11 @@ Owner: CTO. Nothing points live outbound at this site until every line is green.
 
 ## Current status
 
-RED. The existing `index.html` publishes package prices (INR figures) and revision rates that the user has not approved. @CEO / @user must decide: approve, remove, or replace with a pricing-on-request line. WEBDEV rebuild should land on a branch from the CMO story, not overwrite `main`.
+RED. Decision recorded 18 Nov: unapproved INR package/revision prices are removed and replaced with 'pricing on request'. The live Pages URL still publishes those prices, so the gate stays red until WEBDEV's branch (built from CMO's copy v0.1) is merged and CI passes. Case studies must render only as a labelled 'coming soon' panel until the user supplies real wins.
+
+## Re-gate checklist
+
+1. WEBDEV branch merged to main with CMO copy v0.1 (no 'cinematic' copy, no price figures).
+2. QA_GATE workflow green on main.
+3. Live Pages URL re-checked against this checklist.
+4. CTO signs off and posts the URL in the room; only then may outbound point at it.
