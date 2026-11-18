@@ -2,26 +2,31 @@
 
 Owner: CTO. Nothing points live outbound at this site until every line is green.
 
-## Automated (every PR and push to main)
+## Reproduce locally
 
-- No unapproved prices or commercial figures in rendered page copy.
-- Complete HTML document(s) in `index.html` and/or `out/**/*.html`.
+`python3 scripts/qa_check.py` from the repo root (Python 3, no dependencies). The same check runs in GitHub Actions on every PR and push, on any base branch.
+
+## Automated checks
+
+- No unapproved prices or commercial figures in rendered copy.
+- No proof/result claims unless clearly labelled 'coming soon' or placeholder.
+- Complete HTML: doctype, lang, viewport, h1, alt on images.
+- Scans index.html, out/**/*.html and concepts/**/*.html.
 
 ## Manual before sign-off
 
-- Locked stack only: TypeScript + Next.js/React + Tailwind, static export; no paid services.
+- Static build on the locked stack; no paid services, no API.
 - CI green; one reviewer who is not the author; `main` not directly written.
-- Accessibility basics (semantics, contrast, keyboard paths) and performance basics checked.
-- Proof points are either user-supplied real wins or clearly labelled placeholders; no invented names, metrics or testimonials.
-- Message matches the approved CMO story; README has run and deploy steps.
+- Accessibility and performance basics checked by product UI/quality.
+- Message matches CMO copy v0.1; README has run and deploy steps.
 
 ## Current status
 
-RED. Decision recorded 18 Nov: unapproved INR package/revision prices are removed and replaced with 'pricing on request'. The live Pages URL still publishes those prices, so the gate stays red until WEBDEV's branch (built from CMO's copy v0.1) is merged and CI passes. Case studies must render only as a labelled 'coming soon' panel until the user supplies real wins.
+RED. Decision recorded: unapproved INR prices are replaced with 'pricing on request'. PR #2 still contains `concepts/` with the original priced pages, so the gate fails. Strip `concepts/` from the PR, keep `main` untouched, then re-run the gate.
 
 ## Re-gate checklist
 
-1. WEBDEV branch merged to main with CMO copy v0.1 (no 'cinematic' copy, no price figures).
-2. QA_GATE workflow green on main.
-3. Live Pages URL re-checked against this checklist.
-4. CTO signs off and posts the URL in the room; only then may outbound point at it.
+1. PR #1 and PR #2 merged; no priced pages anywhere in the tree.
+2. QA gate green on main and on the live Pages URL.
+3. CTO re-checks the live URL and posts sign-off here.
+4. Only then may outbound point at the site.

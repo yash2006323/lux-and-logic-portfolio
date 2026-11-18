@@ -1,9 +1,8 @@
 name: QA gate
 on:
   pull_request:
-    branches: [main]
   push:
-    branches: [main]
+    branches: ['**']
 permissions:
   contents: read
 jobs:
@@ -15,4 +14,4 @@ jobs:
         with:
           python-version: '3.12'
       - name: Pre-publish checks
-        run: python scripts/qa_check.py
+        run: python3 scripts/qa_check.py
