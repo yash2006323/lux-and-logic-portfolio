@@ -91,6 +91,19 @@ export default function Home() {
           </div>
         </section>
 
+        {/* Contract version — approved floor per CEO */}
+        <section
+          id="offers"
+          className="mx-auto max-w-5xl px-5 py-16 border-t border-line bg-white"
+          aria-labelledby="offers-title"
+        >
+          <h2 id="offers-title" className="text-3xl font-bold tracking-tight text-ink">Offers</h2>
+          <p className="prose mt-3 text-muted">
+            Contract on the standard route: a first website for <strong>₹25,000</strong>.
+            Revisions are charged at <strong>₹1,000/hr</strong>. Flat offer — no extra change fees.
+          </p>
+        </section>
+
         {/* Proof */}
         <section className="py-16" aria-labelledby="proof-title">
           <div className="mx-auto max-w-5xl px-5">
