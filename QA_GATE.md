@@ -8,10 +8,10 @@ Owner: CTO. Nothing points live outbound at this site until every line is green.
 
 ## Automated checks
 
-- No unapproved prices or commercial figures in rendered copy.
+- No unapproved prices or commercial figures in rendered copy (₹25,000 floor and ₹1,000/hr revisions are user-approved and pass).
 - No proof/result claims unless clearly labelled 'coming soon' or placeholder.
 - Complete HTML: doctype, lang, viewport, h1, alt on images.
-- Scans index.html, out/**/*.html and concepts/**/*.html.
+- Scans index.html, 404.html, out/**/*.html and concepts/**/*.html.
 
 ## Manual before sign-off
 
@@ -22,7 +22,9 @@ Owner: CTO. Nothing points live outbound at this site until every line is green.
 
 ## Current status
 
-RED. Decision recorded: unapproved INR prices are replaced with 'pricing on request'. PR #2 still contains `concepts/` with the original priced pages, so the gate fails. Strip `concepts/` from the PR, keep `main` untouched, then re-run the gate.
+GREEN on PR #2 (head 6787c6f, CTO re-check 2026-11-19): 4 HTML files — no unapproved prices/figures, proof claims labelled "Case studies coming soon", a11y basics OK, `concepts/` stripped from the branch.
+
+Outstanding: the page does not yet show the user-approved pricing (₹25,000 first website, ₹1,000/hr revisions) — WEBDEV is to add it to PR #2; the gate treats those as approved when they land. The live Pages URL still publishes the old unapproved prices — it stays not-yet-green until merge + live recheck. Nothing points live outbound at this site until CTO sign-off.
 
 ## Re-gate checklist
 
