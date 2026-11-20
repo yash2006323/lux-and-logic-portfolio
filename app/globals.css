@@ -45,3 +45,33 @@ body {
 }
 
 .prose p { max-width: 65ch; }
+
+/* Restrained motion layer — keeps the reliable positioning, adds a premium feel. */
+@keyframes ll-rise {
+  from { opacity: 0; transform: translateY(14px); }
+  to   { opacity: 1; transform: none; }
+}
+@keyframes ll-drift {
+  0%, 100% { transform: translate3d(0, 0, 0) scale(1); opacity: .45; }
+  50%      { transform: translate3d(22px, -16px, 0) scale(1.12); opacity: .7; }
+}
+.ll-rise { animation: ll-rise .7s cubic-bezier(.2, .8, .2, 1) both; }
+.ll-rise-2 { animation-delay: .09s; }
+.ll-rise-3 { animation-delay: .18s; position: relative; }
+.ll-orb {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  filter: blur(2px);
+  animation: ll-drift 16s ease-in-out infinite;
+  z-index: 0;
+}
+.ll-orb-a {
+  width: 300px; height: 300px; top: -110px; right: -60px;
+  background: radial-gradient(circle at 30% 30%, #c7d2fe, transparent 70%);
+}
+.ll-orb-b {
+  width: 220px; height: 220px; bottom: -90px; left: -50px;
+  background: radial-gradient(circle at 70% 70%, #ddd6fe, transparent 70%);
+  animation-delay: -7s;
+}

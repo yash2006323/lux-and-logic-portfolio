@@ -44,6 +44,7 @@ export default function Home() {
           </a>
           <div className="flex items-center gap-5 text-sm font-medium text-muted">
             <a className="hover:text-ink" href="#services">What we do</a>
+            <a className="hidden hover:text-ink sm:inline" href="/lux-and-Logic.github.io/concepts/">Samples</a>
             <a className="hidden hover:text-ink sm:inline" href="#process">How we work</a>
             <a className="hidden hover:text-ink md:inline" href="#standards">Stack</a>
             <a className="rounded-lg bg-brand px-4 py-2 text-white hover:opacity-90" href="#contact">
@@ -55,14 +56,16 @@ export default function Home() {
 
       <main id="main">
         {/* Hero */}
-        <section className="mx-auto max-w-5xl px-5 pb-16 pt-20 sm:pt-28" aria-labelledby="hero-title">
-          <p className="mb-4 text-sm font-semibold uppercase tracking-widest text-brand">
+        <section className="relative mx-auto max-w-5xl overflow-hidden px-5 pb-16 pt-20 sm:pt-28" aria-labelledby="hero-title">
+          <div className="ll-orb ll-orb-a" aria-hidden="true" />
+          <div className="ll-orb ll-orb-b" aria-hidden="true" />
+          <p className="ll-rise mb-4 text-sm font-semibold uppercase tracking-widest text-brand">
             A reliable web partner
           </p>
-          <h1 id="hero-title" className="max-w-3xl text-4xl font-extrabold leading-tight tracking-tight text-ink sm:text-6xl">
+          <h1 id="hero-title" className="ll-rise ll-rise-2 max-w-3xl text-4xl font-extrabold leading-tight tracking-tight text-ink sm:text-6xl">
             Websites that are fast, accessible, and built to convert.
           </h1>
-          <p className="prose mt-6 text-lg text-muted">
+          <p className="ll-rise ll-rise-3 prose mt-6 text-lg text-muted">
             Lux and Logic builds on a standardised modern stack, ships predictably through a written
             QA gate, and stays on to maintain the site after launch — not just hand it over.
           </p>
@@ -72,6 +75,9 @@ export default function Home() {
             </a>
             <a className="font-semibold text-ink underline decoration-line underline-offset-4 hover:decoration-brand" href="#services">
               See what we do
+            </a>
+            <a className="font-semibold text-brand underline decoration-line underline-offset-4 hover:decoration-brand" href="/lux-and-Logic.github.io/concepts/">
+              See 10 concept samples
             </a>
           </div>
         </section>
@@ -99,8 +105,8 @@ export default function Home() {
         >
           <h2 id="offers-title" className="text-3xl font-bold tracking-tight text-ink">Offers</h2>
           <p className="prose mt-3 text-muted">
-            Contract on the standard route: a first website for <strong>₹25,000</strong>.
-            Revisions are charged at <strong>₹1,000/hr</strong>. Flat offer — no extra change fees.
+            A first website is <strong>₹25,000</strong>, payable on handover — <strong>nothing upfront, no lock-in</strong>.
+            Revisions after handover are <strong>₹1,000/hr</strong>. Flat offer — no extra change fees.
           </p>
         </section>
 
@@ -169,10 +175,19 @@ export default function Home() {
           <div className="mx-auto max-w-5xl px-5 text-center">
             <h2 id="contact-title" className="text-3xl font-bold tracking-tight">Have a site that needs to work harder?</h2>
             <p className="prose mx-auto mt-3 text-white/70">
-              Book a fit call and we will talk about what you need and whether we are the right partner.
+              Send us an email and we will talk about what you need and whether we are the right partner.
             </p>
-            <p className="mt-6 rounded-xl bg-white/10 px-4 py-3 text-sm text-white/80">
-              PLACEHOLDER — booking link and contact details to be supplied by the site owner.
+            <a
+              href="mailto:syashvardhan00714@gmail.com?subject=Website%20enquiry"
+              className="mt-6 inline-block rounded-xl bg-brand px-6 py-3 font-semibold text-white hover:opacity-90"
+            >
+              Email us about a website
+            </a>
+            <p className="mt-4 text-sm text-white/70">
+              Or write directly to{' '}
+              <a className="font-medium text-white underline decoration-white/40 underline-offset-4 hover:decoration-white" href="mailto:syashvardhan00714@gmail.com">
+                syashvardhan00714@gmail.com
+              </a>
             </p>
           </div>
         </section>

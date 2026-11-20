@@ -10,6 +10,9 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
+      <head>
+        <link rel="icon" href="/lux-and-Logic.github.io/favicon.svg" type="image/svg+xml" />
+      </head>
       <body className="font-sans antialiased">
         <a className="skip-link" href="#main">Skip to main content</a>
         {children}
