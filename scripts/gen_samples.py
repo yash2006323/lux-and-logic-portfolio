@@ -13,6 +13,29 @@ OUT = ROOT / "concepts"
 BASE = "/lux-and-Logic.github.io/concepts"
 MAIL = "syashvardhan00714@gmail.com"
 LABEL = "Concept sample — not client work"
+SOCIAL_BASE = "https://yash2006323.github.io/lux-and-Logic.github.io"
+
+
+def social_meta(url, title, desc, image, alt):
+    """CMO-approved share tags; keep demo labels verbatim, no proof, no prices."""
+    e = html.escape
+    lines = [
+        '<meta property="og:type" content="website">',
+        '<meta property="og:site_name" content="Lux and Logic">',
+        f'<meta property="og:url" content="{e(url)}">',
+        f'<meta property="og:title" content="{e(title)}">',
+        f'<meta property="og:description" content="{e(desc)}">',
+        f'<meta property="og:image" content="{e(image)}">',
+        '<meta property="og:image:width" content="1200">',
+        '<meta property="og:image:height" content="630">',
+        f'<meta property="og:image:alt" content="{e(alt)}">',
+        '<meta name="twitter:card" content="summary_large_image">',
+        f'<meta name="twitter:title" content="{e(title)}">',
+        f'<meta name="twitter:description" content="{e(desc)}">',
+        f'<meta name="twitter:image" content="{e(image)}">',
+        f'<meta name="twitter:image:alt" content="{e(alt)}">',
+    ]
+    return "<!-- Social share metadata (CMO-approved v0.3 copy) -->\n" + "\n".join(lines) + "\n"
 
 NICHES = [
     dict(slug="cafe", niche="Café", accent="#9a3412", accent2="#ea580c", bg="#fff7ed",
@@ -303,7 +326,7 @@ def page(n):
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{e(n['niche'])} — {LABEL} | Lux and Logic</title>
 <meta name="description" content="A {e(n['niche'])} concept website by Lux and Logic. {LABEL}.">
-<link rel="icon" href="/lux-and-Logic.github.io/favicon.svg" type="image/svg+xml">
+{social_meta(f'{SOCIAL_BASE}/concepts/{n["slug"]}/', f'{n["niche"]} website concept — Lux and Logic', f'{LABEL}. See how a {n["niche"]} website could look, with clear next steps and accessible motion.', f'{SOCIAL_BASE}/og/{n["slug"]}.png', f'{LABEL}: {n["niche"]} website preview')}<link rel="icon" href="/lux-and-Logic.github.io/favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="{BASE}/assets/samples.css">
 <noscript><style>.reveal{{opacity:1;transform:none}}</style></noscript>
 </head>
@@ -361,7 +384,7 @@ def index():
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Concept samples — Lux and Logic</title>
 <meta name="description" content="Ten web design concept samples across ten different niches. Concept demos, not client work.">
-<link rel="icon" href="/lux-and-Logic.github.io/favicon.svg" type="image/svg+xml">
+{social_meta(f'{SOCIAL_BASE}/concepts/', 'Concept samples — Lux and Logic', f'Ten labelled web design concept samples across ten niches. {LABEL}.', f'{SOCIAL_BASE}/og/samples.png', f'Ten labelled concept samples — {LABEL}')}<link rel="icon" href="/lux-and-Logic.github.io/favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="{BASE}/assets/samples.css">
 <noscript><style>.reveal{{opacity:1;transform:none}}</style></noscript>
 </head>
